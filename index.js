@@ -7,7 +7,7 @@ import bookingEmailTemplate from "./email-templates/booking-email-template.js";
 
 dotenv.config();
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8083;
 
 const app = express();
 app.use(express.json());
@@ -19,6 +19,9 @@ const transporter = nodemailer.createTransport({
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
+    },
+    tls: {
+        rejectUnauthorized: false, 
     },
 });
 
