@@ -7,11 +7,19 @@ import bookingEmailTemplate from "./email-templates/booking-email-template.js";
 
 dotenv.config();
 
-const PORT = process.env.PORT || 8083;
+const PORT = process.env.PORT || 8081;
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+
+const corsOptions = {
+    origin: process.env.CLIENT_URL || "https://www.cieratek.com/", 
+    methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: "Content-Type,Authorization",
+    credentials: true
+};
+
+app.use(cors(corsOptions));
 
 // Nodemailer Transporter Configuration
 const transporter = nodemailer.createTransport({
@@ -78,5 +86,5 @@ app.post("/send-booking-email", async (req, res) => {
 
 // Server Start
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server running on ${PORT}`);
 });
