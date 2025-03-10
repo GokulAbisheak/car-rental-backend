@@ -64,32 +64,32 @@ const bookingEmailTemplate = (firstName, lastName, email, phone, country, street
 
         <div class="container">
             <div class="header">
-                🚗 Car Booking Details
+                🚗 Details zur Fahrzeugbuchung
             </div>
             <div class="content">
 
-                <h3 class="highlight">📌 Booking User Details</h3>
+                <h3 class="highlight">📌 Details des Buchungsbenutzers</h3>
                 <div class="info-box">
                     <p><strong>👤 Name:</strong> ${firstName} ${lastName}</p>
-                    <p><strong>📧 Email:</strong> <a href="mailto:${email}" style="color: #ffbf00;">${email}</a></p>
-                    <p><strong>📞 Phone:</strong> ${phone}</p>
-                    <p><strong>🌍 Country:</strong> ${country}</p>
-                    <p><strong>🏠 Address:</strong> ${street}, ${city}, ${postcode}</p>
+                    <p><strong>📧 E-Mail:</strong> <a href="mailto:${email}" style="color: #ffbf00;">${email}</a></p>
+                    <p><strong>📞 Telefon:</strong> ${phone}</p>
+                    <p><strong>🌍 Land:</strong> ${country}</p>
+                    <p><strong>🏠 Adresse:</strong> ${street}, ${city}, ${postcode}</p>
                 </div>
 
-                <h3 class="highlight">🚘 Booking Details</h3>
+                <h3 class="highlight">🚘 Buchungsdetails</h3>
                 <div class="info-box">
-                    <p><strong>Car:</strong> ${carName}</p>
-                    <p><strong>📅 From:</strong> ${bookingDate}</p>
-                    <p><strong>📅 To:</strong> ${returnDate}</p>
-                    <p><strong>⏳ Duration:</strong> ${duration}</p>
-                    <p><strong>💰 Subtotal:</strong> CHF ${subtotal}</p>
-                    <p><strong>💳 Total:</strong> CHF ${total}</p>
+                    <p><strong>Auto:</strong> ${carName}</p>
+                    <p><strong>📅 Aus:</strong> ${bookingDate}</p>
+                    <p><strong>📅 Zu:</strong> ${returnDate}</p>
+                    <p><strong>⏳ Dauer:</strong> ${duration}</p>
+                    <p><strong>💰 Zwischensumme:</strong> CHF ${subtotal}</p>
+                    <p><strong>💳 Gesamt:</strong> CHF ${total}</p>
                 </div>
             </div>
 
             <div class="footer">
-                &copy; 2024 Dream Rent | <a href="https://dream-rent.ch">Visit Website</a>
+                &copy; 2024 Dream Rent | <a href="https://dream-rent.ch">Besuchen Sie die Website</a>
             </div>
         </div>
 

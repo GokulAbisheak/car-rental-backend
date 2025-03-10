@@ -60,28 +60,28 @@ const contactUsEmailTemplate = (firstName, lastName, email, contactNumber, messa
 
         <div class="container">
             <div class="header">
-                🚗 Contact Inquiry Received!
+                🚗 Kontaktanfrage erhalten!
             </div>
             <div class="content">
-                <p><strong>Hello Admin,</strong></p>
-                <p>You have received a new contact inquiry from your website.</p>
+                <p><strong>Hallo Admin,</strong></p>
+                <p>Sie haben eine neue Kontaktanfrage von Ihrer Website erhalten.</p>
 
                 <div class="info-box">
                     <p><strong>📌 Name:</strong> ${firstName} ${lastName}</p>
-                    <p><strong>📧 Email:</strong> <a href="mailto:${email}" style="color: #ffbf00;">${email}</a></p>
-                    <p><strong>📞 Contact Number:</strong> ${contactNumber}</p>
+                    <p><strong>📧 E-Mail:</strong> <a href="mailto:${email}" style="color: #ffbf00;">${email}</a></p>
+                    <p><strong>📞 Kontaktnummer:</strong> ${contactNumber}</p>
                 </div>
 
                 <div class="info-box">
-                    <p><strong>📜 Message:</strong></p>
+                    <p><strong>📜 Nachricht:</strong></p>
                     <blockquote>${message}</blockquote>
                 </div>
 
-                <p>Make sure to respond to the user promptly.</p>
+                <p>Stellen Sie sicher, dass Sie dem Benutzer umgehend antworten.</p>
             </div>
 
             <div class="footer">
-                &copy; 2024 Dream Rent | <a href="https://dream-rent.ch">Visit Website</a>
+                &copy; 2024 Dream Rent | <a href="https://dream-rent.ch">Besuchen Sie die Website</a>
             </div>
         </div>
 
