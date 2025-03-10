@@ -90,4 +90,4 @@ const contactUsEmailTemplate = (firstName, lastName, email, contactNumber, messa
     `;
 };
 
-export default contactUsEmailTemplate;
+module.exports = contactUsEmailTemplate;

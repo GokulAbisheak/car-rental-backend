@@ -1,9 +1,9 @@
-import express from "express";
-import dotenv from "dotenv";
-import cors from "cors";
-import nodemailer from "nodemailer";
-import contactUsEmailTemplate from "./email-templates/contact-us-email-template.js";
-import bookingEmailTemplate from "./email-templates/booking-email-template.js";
+const express = require("express");
+const dotenv = require("dotenv");
+const cors = require("cors");
+const nodemailer = require("nodemailer");
+const contactUsEmailTemplate = require("./email-templates/contact-us-email-template.js");
+const bookingEmailTemplate = require("./email-templates/booking-email-template.js");
 
 dotenv.config();
 

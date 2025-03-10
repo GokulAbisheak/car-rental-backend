@@ -98,4 +98,4 @@ const bookingEmailTemplate = (firstName, lastName, email, phone, country, street
     `
 }
 
-export default bookingEmailTemplate;
+module.exports = bookingEmailTemplate;
