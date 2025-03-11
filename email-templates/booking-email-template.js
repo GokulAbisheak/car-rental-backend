@@ -70,11 +70,14 @@ const bookingEmailTemplate = (firstName, lastName, email, phone, country, street
 
                 <h3 class="highlight">📌 Details des Buchungsbenutzers</h3>
                 <div class="info-box">
-                    <p><strong>👤 Name:</strong> ${firstName} ${lastName}</p>
-                    <p><strong>📧 E-Mail:</strong> <a href="mailto:${email}" style="color: #ffbf00;">${email}</a></p>
+                    <p><strong>👤 Vorname:</strong> ${firstName} </p>
+                    <p><strong>👤 Nachname:</strong> ${lastName}</p>
+                    <p><strong>🏠 Straße/ Nr.:</strong> ${street} </p>
+                    <p><strong>⭕ Postleitzahl:</strong> ${postcode}</p>
+                    <p><strong>🛣️ Ort:</strong> ${city} </p>
+                    <p><strong>🌍 Land / Region:</strong> ${country}</p>
                     <p><strong>📞 Telefon:</strong> ${phone}</p>
-                    <p><strong>🌍 Land:</strong> ${country}</p>
-                    <p><strong>🏠 Adresse:</strong> ${street}, ${city}, ${postcode}</p>
+                    <p><strong>📧 E-Mail:</strong> <a href="mailto:${email}" style="color: #ffbf00;">${email}</a></p>
                 </div>
 
                 <h3 class="highlight">🚘 Buchungsdetails</h3>
