@@ -85,7 +85,10 @@ const bookingEmailTemplate = (firstName, lastName, email, phone, country, street
                     <p><strong>Auto:</strong> ${carName}</p>
                     <p><strong>📅 Aus:</strong> ${bookingDate}</p>
                     <p><strong>📅 Zu:</strong> ${returnDate}</p>
-                    <p><strong>⏳ Dauer:</strong> ${duration}</p>
+                    <p><strong>⏳ Dauer:</strong> ${duration === "Monday - Friday (incl. 650 km)"
+                        ? "Montag - Freitag (inkl. 650 Km)"
+                        : duration.replace("hours", "Stunden")}
+                    </p>
                     <p><strong>💰 Zwischensumme:</strong> CHF ${subtotal}</p>
                     <p><strong>💳 Gesamt:</strong> CHF ${total}</p>
                 </div>
