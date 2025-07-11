@@ -12,14 +12,14 @@ const PORT = process.env.PORT || 8081;
 const app = express();
 app.use(express.json());
 
-// const corsOptions = {
-//     origin: process.env.CLIENT_URL || "https://www.cieratek.com/", 
-//     methods: "GET,POST,PUT,DELETE",
-//     allowedHeaders: "Content-Type,Authorization",
-//     credentials: true
-// };
+const corsOptions = {
+    origin: process.env.CLIENT_URL || "http://www.dream-rent.ch", 
+    methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: "Content-Type,Authorization",
+    credentials: true
+};
 
-app.use(cors());
+app.use(cors(corsOptions));
 
 // Nodemailer Transporter Configuration
 const transporter = nodemailer.createTransport({
