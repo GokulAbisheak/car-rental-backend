@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 
 const corsOptions = {
-    origin: process.env.CLIENT_URL || "http://www.dream-rent.ch", 
+    origin: [process.env.CLIENT_URL, "http://www.dream-rent.ch", "http://dream-rent.ch"],
     methods: "GET,POST,PUT,DELETE",
     allowedHeaders: "Content-Type,Authorization",
     credentials: true
