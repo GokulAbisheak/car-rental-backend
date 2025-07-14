@@ -12,12 +12,27 @@ const PORT = process.env.PORT || 8081;
 const app = express();
 app.use(express.json());
 
+const allowedOrigins = [
+    "https://www.dream-rent.ch",
+    "https://dream-rent.ch",
+    "http://localhost:3000"
+];
+
 const corsOptions = {
-    origin: [process.env.CLIENT_URL, "http://www.dream-rent.ch", "http://dream-rent.ch"],
+    origin: function (origin, callback) {
+        if (!origin) return callback(null, true); 
+
+        if (allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("CORS not allowed for this origin: " + origin));
+        }
+    },
     methods: "GET,POST,PUT,DELETE",
     allowedHeaders: "Content-Type,Authorization",
     credentials: true
 };
+
 
 app.use(cors(corsOptions));
 
@@ -29,7 +44,7 @@ const transporter = nodemailer.createTransport({
         pass: process.env.EMAIL_PASS,
     },
     tls: {
-        rejectUnauthorized: false, 
+        rejectUnauthorized: false,
     },
 });
 
